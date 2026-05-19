@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Guest" ALTER COLUMN "isAttending" DROP NOT NULL,
+ALTER COLUMN "isAttending" DROP DEFAULT;
