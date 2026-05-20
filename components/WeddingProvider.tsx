@@ -15,7 +15,6 @@ const WeddingContext = createContext<WeddingContextType | undefined>(undefined);
 
 const WeddingProvider = ({ children }: { children: React.ReactNode }) => {
   const [invitationEmail, setInvitationEmail] = useState("");
-
   const handleSetInvitation = (email: string) => setInvitationEmail(email);
 
   return (

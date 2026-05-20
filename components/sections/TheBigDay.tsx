@@ -18,6 +18,7 @@ import { useToggle } from "@/hooks/useToggle";
 import { useEffect, useState } from "react";
 import { getInvitationByEmail } from "@/lib/actions";
 import { InvitationWithInvitees } from "@/lib/types";
+import Container from "../aetherium/Container";
 
 const TheBigDay = () => {
   const { tangerineFont, invitationEmail } = useWeddingContext();
@@ -37,26 +38,37 @@ const TheBigDay = () => {
         Everything you need to know for the day we say “I do.”
       </Category>
 
-      <Section imageSrc={sectionTwo.src} imagePosition="45% 100%" className="text-center pt-36 pb-12">
-        <Text className="text-sm mb-8 font-bold">BOTH THE CEREMONY & RECEPTION WILL TAKE PLACE AT:</Text>
-        <Location
-          className="mb-16"
-          name="Ascott Parc Event Centre"
-          street="2839 RUTHERFORD ROAD"
-          city="VAUGHAN, ON"
-          googleHref="https://maps.app.goo.gl/fR4CL8SWnEjKgKPG7"
-        />
+      <Section imageSrc={sectionTwo.src} imagePosition="45% 100%" className="text-center space-y-16">
+        <Container>
+          <Text className="text-sm mb-8 font-bold">BOTH THE CEREMONY & RECEPTION WILL TAKE PLACE AT:</Text>
+          <Location
+            className=""
+            name="Ascott Parc Event Centre"
+            street="2839 RUTHERFORD ROAD"
+            city="VAUGHAN, ON"
+            googleHref="https://maps.app.goo.gl/fR4CL8SWnEjKgKPG7"
+          />
+        </Container>
 
-        <Text className="text-sm mb-8 font-bold">OUR CEREMONY WILL BE HELD AT:</Text>
-        <h2 className={`text-5xl mb-4 ${tangerineFont}`}>The Garden Gazebo</h2>
-        <h3 className="text-xl mb-16 font-semibold">AT 4:00 PM</h3>
+        <Container>
+          <Text className="text-sm mb-8 font-bold">OUR CEREMONY WILL BE HELD AT:</Text>
+          <h2 className={`text-5xl mb-4 ${tangerineFont}`}>The Garden Gazebo</h2>
+          <h3 className="text-xl font-semibold">AT 4:00 PM</h3>
+        </Container>
 
-        <Text className="text-sm mb-8 font-bold">FOLLOWED BY COCKTAIL HOUR AND DINNER AT:</Text>
-        <h2 className={`text-5xl mb-16 ${tangerineFont}`}>The Trillium Hall</h2>
+        <Container>
+          <Text className="text-sm mb-8 font-bold">FOLLOWED BY COCKTAIL HOUR AND DINNER AT:</Text>
+          <h2 className={`text-5xl ${tangerineFont}`}>The Trillium Hall</h2>
+        </Container>
 
-        <Button variant="secondary" className="mb-4 md:w-1/4 mx-auto" onClick={toggleIsRsvpOpen}>
+        <Button disabled variant="secondary" className="md:w-1/4 mx-auto" onClick={toggleIsRsvpOpen}>
           {invitation?.rsvp ? "VIEW YOUR RSVP" : "RSVP NOW"}
         </Button>
+
+        <Container className=" bg-black/25 p-4 rounded space-y-4">
+          <Text className="text-sm font-bold">THANK YOU TO EVERYONE WHO ATTENDED!</Text>
+          <Text className="text-sm font-bold">WE’RE SO GRATEFUL YOU WERE ABLE TO CELEBRATE WITH US AND HELP MAKE OUR WEDDING DAY SO SPECIAL.</Text>
+        </Container>
 
         {/* <Text className="text-xs mb-42">
           RSVPs open until <b>Saturday February 21, 2026</b>

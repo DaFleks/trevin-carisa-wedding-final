@@ -1,5 +1,10 @@
-import WeddingWrapper from "@/components/WeddingWrapper";
+import WeddingApp from "@/components/WeddingApp";
+import WeddingProvider from "@/components/WeddingProvider";
 
 export default function Home() {
-  return <WeddingWrapper />;
+  return (
+    <WeddingProvider>
+      <WeddingApp />
+    </WeddingProvider>
+  );
 }

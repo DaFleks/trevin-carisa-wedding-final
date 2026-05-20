@@ -44,7 +44,7 @@ const Accomodations = () => {
           phone="1 (888) 660 9938"
           googleHref="https://maps.app.goo.gl/5FXygK7uBPbZjNvW8"
         />
-        <ScrollDownIcon text="THE BIG DAY" />
+        <ScrollDownIcon text="FAQs" />
       </Section>
     </>
   );
